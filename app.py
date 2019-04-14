@@ -9,7 +9,8 @@ mem = {}
 
 @app.route('/9gag-awesome', methods=['GET'])
 def awesome_get():
-    try:
+    return "ewewewe",200
+    '''try:
         now_time = strftime('%a,%d %b %Y %H:%M:%S')
         if 'last_time_awesome' not in mem or (now_time[:-2] != mem['last_time_awesome'][:-2]) or (now_time[-2:] - mem['last_time_awesome'][-2:]) > 2:
             r = requests.get('https://9gag-rss.com/api/rss/get?code=9GAGAwesomeNoGif&format=2')
@@ -34,6 +35,7 @@ def awesome_get():
 
     except Exception as e:
         return ""
+        '''
 
 
 @app.route('/9gag-comic', methods=['GET'])
